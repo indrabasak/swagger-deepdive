@@ -27,8 +27,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterBuilder.TYPE_ISO_DATE_TIME;
-import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterBuilder.TYPE_UUID;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_ISO_DATE_TIME;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_UUID;
 
 /**
  * {@code ElephantController} is the spring REST controller for Elephant API.
@@ -96,6 +96,10 @@ public class ElephantController {
             notes = "Requires an Elephant identifier",
             response = Elephant.class,
             position = 2)
+    @ApiResponses({
+            @ApiResponse(code = 200, message = "Successful retrieval of elephant", response = Elephant.class),
+            @ApiResponse(code = 404, message = "Elephant with given ID does not exist"),
+            @ApiResponse(code = 500, message = "Internal server error")})
     @RequestMapping(method = RequestMethod.GET, value = ELEPHANT_BY_ID_URL,
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody

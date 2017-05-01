@@ -27,8 +27,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterBuilder.TYPE_ISO_DATE_TIME;
-import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterBuilder.TYPE_UUID;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_ISO_DATE_TIME;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_UUID;
 
 /**
  * {@code ToucanController} is the spring REST controller for Toucan API.

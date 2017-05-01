@@ -1,4 +1,4 @@
-package com.basaki.example.menagerie.swagger;
+package com.basaki.example.menagerie.swagger.plugin;
 
 import com.fasterxml.classmate.ResolvedType;
 import com.google.common.base.Function;
@@ -23,7 +23,7 @@ import static com.google.common.base.Strings.isNullOrEmpty;
 import static springfox.documentation.swagger.common.SwaggerPluginSupport.pluginDoesApply;
 
 /**
- * {@code ApiParamUiidAndDateParameterBuilder} swagger plugin to convert default
+ * {@code UiidAndDateParameterBuilderPlugin} swagger plugin to convert default
  * value field to a dynamic field to display newly generated UUID and date in
  * ISO format.
  * <p/>
@@ -33,7 +33,7 @@ import static springfox.documentation.swagger.common.SwaggerPluginSupport.plugin
  */
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1000)
-public class ApiParamUiidAndDateParameterBuilder implements ParameterBuilderPlugin {
+public class UiidAndDateParameterBuilderPlugin implements ParameterBuilderPlugin {
 
     public static final String TYPE_ISO_DATE_TIME = "ISO_DATE_TIME";
 

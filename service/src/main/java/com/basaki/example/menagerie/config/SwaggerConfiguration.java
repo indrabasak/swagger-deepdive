@@ -9,9 +9,9 @@ import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.service.ApiDescription;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
+import springfox.documentation.service.Operation;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
-import springfox.documentation.swagger.readers.operation.SwaggerOperationResponseClassReader;
 import springfox.documentation.swagger.web.UiConfiguration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
@@ -38,6 +38,7 @@ public class SwaggerConfiguration {
         return new Docket(DocumentationType.SWAGGER_2)
                 .groupName("animal")
                 .apiDescriptionOrdering(new Ordering<ApiDescription>() {
+                    //doesn't work
                     @Override
                     public int compare(ApiDescription left,
                             ApiDescription right) {
@@ -56,6 +57,14 @@ public class SwaggerConfiguration {
                         }
 
                         return position;
+                    }
+                })
+                .operationOrdering(new Ordering<Operation>() {
+                    //doesn't work
+                    @Override
+                    public int compare(Operation left, Operation right) {
+                        return Integer.compare(left.getPosition(),
+                                right.getPosition());
                     }
                 })
                 .select()
@@ -87,6 +96,7 @@ public class SwaggerConfiguration {
                 null,
                 "none",
                 //"alpha",
+                //doesn't work
                 "function(e, t) { console.log(e.name); return e.name.localeCompare(t.name);}",
                 "schema",
                 UiConfiguration.Constants.DEFAULT_SUBMIT_METHODS,

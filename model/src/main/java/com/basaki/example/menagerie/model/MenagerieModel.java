@@ -1,6 +1,7 @@
 package com.basaki.example.menagerie.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import io.swagger.annotations.ApiModelProperty;
 import java.util.UUID;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,4 +18,7 @@ public abstract class MenagerieModel {
     private UUID id;
     private String name;
     private Gender gender;
+
+    @ApiModelProperty(access = "hidden", hidden = true)
+    private boolean doNotShow;
 }

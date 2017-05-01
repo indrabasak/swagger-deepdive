@@ -4,6 +4,8 @@ import com.basaki.example.menagerie.model.Gender;
 import com.basaki.example.menagerie.model.MenagerieRequest;
 import com.basaki.example.menagerie.model.animal.Tiger;
 import com.basaki.example.menagerie.service.TigerService;
+import com.basaki.example.menagerie.swagger.annotation.ApiOperationSince;
+import com.basaki.example.menagerie.swagger.annotation.Classification;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,8 +29,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterBuilder.TYPE_ISO_DATE_TIME;
-import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterBuilder.TYPE_UUID;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_ISO_DATE_TIME;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_UUID;
 
 /**
  * {@code TigerController} is the spring REST controller for Tiger API.
@@ -44,6 +46,7 @@ import static com.basaki.example.menagerie.swagger.ApiParamUiidAndDateParameterB
 @Api(value = "Tiger API",
         description = "Tiger API",
         produces = "application/json", tags = {"A2"})
+@Classification(kingdom = "Animalia", phylum = "Chordata", clazz = "Mammalia", order = "Carnivora", family = "Felidae", genus = "Panthera")
 public class TigerController {
     private static final String TIGER_URL = "/tigers";
 
@@ -67,6 +70,7 @@ public class TigerController {
     @ApiResponses({
             @ApiResponse(code = 201, response = Tiger.class,
                     message = "Tiger created successfully")})
+    @ApiOperationSince("1.0")
     @RequestMapping(method = RequestMethod.POST, value = TIGER_URL,
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE)
