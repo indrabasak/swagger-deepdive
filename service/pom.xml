@@ -134,6 +134,14 @@
                             <type>jar</type>
                             <outputDirectory>${project.build.directory}/classes</outputDirectory>
                         </artifactItem>
+                        <artifactItem>
+                            <groupId>io.swagger</groupId>
+                            <artifactId>swagger-models</artifactId>
+                            <version>1.5.10</version>
+                            <type>jar</type>
+                            <outputDirectory>${project.build.directory}/classes</outputDirectory>
+                            <excludes>META-INF/**</excludes>
+                        </artifactItem>
                     </artifactItems>
                 </configuration>
             </plugin>
@@ -202,6 +210,7 @@
                                              dir="${project.build.directory}/classes/META-INF/resources">
                                         <include name="swagger-ui.html"/>
                                     </replace>
+                                    <delete file="${project.build.directory}/classes/io/swagger/models/Swagger.class"/>
                                 </sequential>
                             </tasks>
                         </configuration>

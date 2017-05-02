@@ -21,7 +21,8 @@ import org.springframework.context.annotation.ComponentScan;
         "com.basaki.example.menagerie.error",
         "com.basaki.example.menagerie.model",
         "com.basaki.example.menagerie.service",
-        "com.basaki.example.menagerie.swagger"})
+        "com.basaki.example.menagerie.swagger.annotation",
+        "com.basaki.example.menagerie.swagger.plugin"})
 public class MenagerieApplication {
     public static void main(String[] args) {
         SpringApplication.run(MenagerieApplication.class, args);

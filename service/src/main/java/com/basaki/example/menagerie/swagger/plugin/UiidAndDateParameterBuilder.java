@@ -33,7 +33,7 @@ import static springfox.documentation.swagger.common.SwaggerPluginSupport.plugin
  */
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1000)
-public class UiidAndDateParameterBuilderPlugin implements ParameterBuilderPlugin {
+public class UiidAndDateParameterBuilder implements ParameterBuilderPlugin {
 
     public static final String TYPE_ISO_DATE_TIME = "ISO_DATE_TIME";
 

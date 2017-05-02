@@ -4,6 +4,7 @@ import com.basaki.example.menagerie.model.Gender;
 import com.basaki.example.menagerie.model.MenagerieRequest;
 import com.basaki.example.menagerie.model.animal.Elephant;
 import com.basaki.example.menagerie.service.ElephantService;
+import com.basaki.example.menagerie.swagger.annotation.Classification;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,8 +28,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_ISO_DATE_TIME;
-import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_UUID;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilder.TYPE_ISO_DATE_TIME;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilder.TYPE_UUID;
 
 /**
  * {@code ElephantController} is the spring REST controller for Elephant API.
@@ -44,6 +45,9 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 @Api(value = "Elephant API",
         description = "Elephant API",
         produces = "application/json", tags = {"A3"})
+@Classification(kingdom = "Animalia", phylum = "Chordata", clazz = "Mammalia",
+        order = "Proboscidea", family = "Elephantidae", genus = "Loxodonta",
+        species = "Loxodonta africana")
 public class ElephantController {
 
     private static final String ELEPHANT_URL = "/elephants";

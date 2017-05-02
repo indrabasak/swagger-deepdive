@@ -7,6 +7,7 @@ import java.util.Collections;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
+import springfox.documentation.service.ObjectVendorExtension;
 import springfox.documentation.service.StringVendorExtension;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.OperationBuilderPlugin;
@@ -19,7 +20,7 @@ import springfox.documentation.swagger.common.SwaggerPluginSupport;
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1002)
 @Slf4j
-public class SinceOperationBuilderPlugin implements OperationBuilderPlugin {
+public class SinceOperationBuilder implements OperationBuilderPlugin {
 
     @Override
     public void apply(OperationContext context) {
@@ -29,11 +30,18 @@ public class SinceOperationBuilderPlugin implements OperationBuilderPlugin {
         Optional<ApiOperationSince> apiSinceOperation =
                 context.findAnnotation(ApiOperationSince.class);
         if (apiSinceOperation.isPresent() && apiSinceOperation.get().value() != null) {
-            String since = apiSinceOperation.get().value();
+            String value = apiSinceOperation.get().value();
+            String description = apiSinceOperation.get().description();
+            ObjectVendorExtension ext = new ObjectVendorExtension("x-since");
+            if (description != null) {
+                ext.addProperty(
+                        new StringVendorExtension("description", description));
+            }
+            ext.addProperty(new StringVendorExtension("value", value));
+
             context.operationBuilder().extensions(
-                    Collections.singletonList(
-                            new StringVendorExtension("x-since", since)));
-            log.debug("Added since ", since);
+                    Collections.singletonList(ext));
+            log.debug("Added since ", value);
         }
     }
 

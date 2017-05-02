@@ -24,4 +24,6 @@ public @interface Classification {
     String family() default "";
 
     String genus() default "";
+
+    String species() default "";
 }

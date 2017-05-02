@@ -31,7 +31,7 @@ import static springfox.documentation.service.Tags.tagNameComparator;
  */
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1001)
-public class ClassificationApiListingBuilderPlugin implements ApiListingBuilderPlugin {
+public class ClassificationApiListingBuilder implements ApiListingBuilderPlugin {
 
     @Override
     public void apply(ApiListingContext context) {
@@ -117,7 +117,12 @@ public class ClassificationApiListingBuilderPlugin implements ApiListingBuilderP
     private void addTagName(ApiListingContext context, Classification clsfn) {
         ApiListingBuilder builder = context.apiListingBuilder();
         Set<String> newTagNames = newHashSet();
-        newTagNames.add(clsfn.toString());
+        String value = clsfn.toString();
+        int index = value.indexOf("Classification");
+        if (index >= 0) {
+            value = value.substring(index);
+        }
+        newTagNames.add(value);
         builder.tagNames(newTagNames);
     }
 

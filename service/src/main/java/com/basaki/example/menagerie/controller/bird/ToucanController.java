@@ -4,6 +4,7 @@ import com.basaki.example.menagerie.model.Gender;
 import com.basaki.example.menagerie.model.MenagerieRequest;
 import com.basaki.example.menagerie.model.bird.Toucan;
 import com.basaki.example.menagerie.service.ToucanService;
+import com.basaki.example.menagerie.swagger.annotation.Classification;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,8 +28,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_ISO_DATE_TIME;
-import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_UUID;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilder.TYPE_ISO_DATE_TIME;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilder.TYPE_UUID;
 
 /**
  * {@code ToucanController} is the spring REST controller for Toucan API.
@@ -44,6 +45,9 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 @Api(value = "Toucan API",
         description = "Toucan API",
         produces = "application/json", tags = {"Toucan"})
+@Classification(kingdom = "Animalia", phylum = "Chordata", clazz = "Aves",
+        order = "Piciformes", family = "Ramphastidae", genus = "Ramphastos",
+        species = "Ramphastos dicolorus")
 public class ToucanController {
     private static final String TOUCAN_URL = "/toucans";
 

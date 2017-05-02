@@ -4,6 +4,7 @@ import com.basaki.example.menagerie.model.Gender;
 import com.basaki.example.menagerie.model.MenagerieRequest;
 import com.basaki.example.menagerie.model.bird.Parrot;
 import com.basaki.example.menagerie.service.ParrotService;
+import com.basaki.example.menagerie.swagger.annotation.Classification;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
@@ -27,8 +28,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_ISO_DATE_TIME;
-import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilderPlugin.TYPE_UUID;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilder.TYPE_ISO_DATE_TIME;
+import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBuilder.TYPE_UUID;
 
 /**
  * {@code ParrotController} is the spring REST controller for Parrot API.
@@ -44,6 +45,9 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 @Api(value = "Parrot API",
         description = "Parrot API",
         produces = "application/json", tags = {"Parrot"})
+@Classification(kingdom = "Animalia", phylum = "Chordata", clazz = "Aves",
+        order = "Psittaciformes", family = "Psittacidae", genus = "Ara",
+        species = "Ara ararauna")
 public class ParrotController {
     private static final String PARROT_URL = "/parrots";
 

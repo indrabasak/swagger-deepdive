@@ -1,5 +1,6 @@
 package com.basaki.example.menagerie.config;
 
+import com.basaki.example.menagerie.swagger.plugin.ExampleApiListingScanner;
 import com.google.common.base.Predicate;
 import com.google.common.collect.Ordering;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +12,7 @@ import springfox.documentation.service.ApiInfo;
 import springfox.documentation.service.Contact;
 import springfox.documentation.service.Operation;
 import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spi.service.ApiListingScannerPlugin;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger.web.UiConfiguration;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
@@ -103,6 +105,11 @@ public class SwaggerConfiguration {
                 true,
                 true,
                 60000L);
+    }
+
+    @Bean
+    public ApiListingScannerPlugin listingScanner() {
+        return new ExampleApiListingScanner();
     }
 
     /**

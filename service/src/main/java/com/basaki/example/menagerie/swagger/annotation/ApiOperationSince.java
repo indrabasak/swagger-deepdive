@@ -12,4 +12,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface ApiOperationSince {
     String value() default "";
+
+    String description() default "";
 }
