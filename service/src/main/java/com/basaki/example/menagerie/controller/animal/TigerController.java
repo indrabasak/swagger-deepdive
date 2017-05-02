@@ -35,7 +35,7 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 /**
  * {@code TigerController} is the spring REST controller for Tiger API.
  * Exposes all CRUD operations on tiger.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/29/17

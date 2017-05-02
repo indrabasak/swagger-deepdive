@@ -34,7 +34,7 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 /**
  * {@code ParrotController} is the spring REST controller for Parrot API.
  * Exposes all CRUD operations on parrot.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/29/17

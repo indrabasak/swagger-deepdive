@@ -1,9 +1,5 @@
 package com.basaki.example.menagerie.data.repository;
 
-/**
- * Created by indra.basak on 4/29/17.
- */
-
 import com.basaki.example.menagerie.data.entity.MenagerieEntity;
 import com.basaki.example.menagerie.data.entity.Species;
 import java.util.List;
@@ -14,7 +10,7 @@ import org.springframework.stereotype.Repository;
 /**
  * {@code MenagerieRepository} exposes all CRUD operations on a data of type
  * {@code MenagerieEntity}.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since on 4/29/17

@@ -15,7 +15,12 @@ import springfox.documentation.spi.service.contexts.OperationContext;
 import springfox.documentation.swagger.common.SwaggerPluginSupport;
 
 /**
- * Created by indra.basak on 5/1/17.
+ * {@code SinceOperationBuilder} swagger plugin to convert {@code
+ * ApiOperationSince} annotation to a swagger json object.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 5/1/17
  */
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1002)

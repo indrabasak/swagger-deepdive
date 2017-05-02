@@ -3,7 +3,11 @@ package com.basaki.example.menagerie.model;
 import com.fasterxml.jackson.annotation.JsonCreator;
 
 /**
- * Created by indra.basak on 4/29/17.
+ * {@code Gender} represents the gender of a menagerie model.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/29/17
  */
 public enum Gender {
 

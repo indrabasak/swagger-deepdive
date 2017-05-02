@@ -27,7 +27,12 @@ import static org.springframework.core.annotation.AnnotationUtils.findAnnotation
 import static springfox.documentation.service.Tags.tagNameComparator;
 
 /**
- * Created by indra.basak on 5/1/17.
+ * {@code ClassificationApiListingBuilder} swagger plugin to convert {@code
+ * Classification} annotation to a swagger json object.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 5/1/17
  */
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1001)

@@ -9,7 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Created by indra.basak on 4/29/17.
+ * {@code MenagerieModel} represents a resident of menagerie.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/29/17
  */
 @Data
 @NoArgsConstructor

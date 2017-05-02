@@ -17,12 +17,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * {@code SwaggerConfiguration} is the configuration for setting up swagger for
- * the author controller. The swagger documentation can be viewed at {@code
- * http://<host>:<port>/swagger-ui-html}
- * <p/>
+ * all the menagerie controller. The swagger documentation can be viewed at
+ * {@code http://<host>:<port>/swagger-ui-html}.
+ * <p>
  *
  * @author Indra Basak
- * @since 2/23/17
+ * @since 4/29/17
  */
 @Configuration
 @EnableSwagger2

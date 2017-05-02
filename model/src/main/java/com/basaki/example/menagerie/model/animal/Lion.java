@@ -5,7 +5,7 @@ import com.basaki.example.menagerie.model.MenagerieModel;
 
 /**
  * {@code Lion} represents a Panthera leo.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/29/17

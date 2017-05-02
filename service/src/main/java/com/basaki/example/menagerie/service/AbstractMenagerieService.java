@@ -5,8 +5,8 @@ import com.basaki.example.menagerie.data.entity.Species;
 import com.basaki.example.menagerie.data.repository.MenagerieRepository;
 import com.basaki.example.menagerie.error.DataNotFoundException;
 import com.basaki.example.menagerie.model.Gender;
-import com.basaki.example.menagerie.model.MenagerieRequest;
 import com.basaki.example.menagerie.model.MenagerieModel;
+import com.basaki.example.menagerie.model.MenagerieRequest;
 import com.basaki.example.menagerie.model.animal.Elephant;
 import com.basaki.example.menagerie.model.animal.Lion;
 import com.basaki.example.menagerie.model.animal.Tiger;
@@ -28,7 +28,12 @@ import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatc
 import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.startsWith;
 
 /**
- * Created by indra.basak on 4/29/17.
+ * {@code AbstractMenagerieService} represents an menagerie service which
+ * provides all the CRUD opeartions by interacting with the repository.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/29/17
  */
 @Slf4j
 public abstract class AbstractMenagerieService<T extends MenagerieModel> {

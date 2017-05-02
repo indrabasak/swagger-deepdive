@@ -5,7 +5,7 @@ import com.basaki.example.menagerie.model.MenagerieModel;
 /**
  * {@code Elephant} represents a large mammal of the family Elephantidae and the
  * order Proboscidea.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/29/17

@@ -11,7 +11,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * Created by indra.basak on 4/29/17.
+ * {@code MenagerieEntity} represents a menagerie entity stored in the database.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/29/17
  */
 @Data
 @NoArgsConstructor

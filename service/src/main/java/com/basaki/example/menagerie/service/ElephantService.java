@@ -7,7 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by indra.basak on 4/29/17.
+ * {@code ElephantService} provides CRUD operations on an {@code Elephant}.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/29/17
  */
 @Service
 public class ElephantService extends AbstractMenagerieService<Elephant> {

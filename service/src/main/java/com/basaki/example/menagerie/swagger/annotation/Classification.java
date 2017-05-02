@@ -7,7 +7,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by indra.basak on 5/1/17.
+ * {@code Classification} is a custom swagger annotation to publish the
+ * classification of a menagerie resident type as a swagger json object.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 5/1/17
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

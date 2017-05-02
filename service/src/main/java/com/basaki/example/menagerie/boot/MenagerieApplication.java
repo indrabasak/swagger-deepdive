@@ -7,10 +7,10 @@ import org.springframework.context.annotation.ComponentScan;
 /**
  * {@code MenagerieApplication} represents the entry point for menagerie spring
  * boot application.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
- * @since 2/23/17
+ * @since 4/29/17
  */
 @SpringBootApplication
 @ComponentScan(basePackages = {

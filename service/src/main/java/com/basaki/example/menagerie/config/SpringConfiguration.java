@@ -14,7 +14,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 /**
- * Created by indra.basak on 3/8/17.
+ * {@code SpringConfiguration} is the configuration for setting up dozer and json
+ * mapper.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/29/17
  */
 @Configuration
 public class SpringConfiguration {
@@ -38,7 +43,7 @@ public class SpringConfiguration {
     @Primary
     @Bean
     public ObjectMapper createCustomObjectMapper() {
-        ObjectMapper mapper =  new ObjectMapper();
+        ObjectMapper mapper = new ObjectMapper();
         mapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
         mapper.registerModule(new JodaModule());
 

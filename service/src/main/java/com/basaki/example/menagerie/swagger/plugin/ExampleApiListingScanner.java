@@ -21,7 +21,15 @@ import springfox.documentation.spring.web.readers.operation.CachingOperationName
 import springfox.documentation.swagger.common.SwaggerPluginSupport;
 
 /**
- * Created by indra.basak on 5/1/17.
+ * {@code ExampleApiListingScanner} swagger plugin to build a new elephant
+ * endpoint.
+ * <p></p>
+ * Doesn't work with springfox 2.6.1.
+ * NOTE: @see <a href="https://github.com/springfox/springfox/issues/1767">#1767</a>
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 5/1/17
  */
 @Component
 @Order(SwaggerPluginSupport.SWAGGER_PLUGIN_ORDER + 1003)

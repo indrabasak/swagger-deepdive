@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 /**
  * {@code DataConfiguration} is the configuration for setting up database
  * connection.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/11/17

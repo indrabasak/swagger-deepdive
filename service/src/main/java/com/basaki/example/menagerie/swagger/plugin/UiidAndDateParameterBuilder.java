@@ -23,10 +23,10 @@ import static com.google.common.base.Strings.isNullOrEmpty;
 import static springfox.documentation.swagger.common.SwaggerPluginSupport.pluginDoesApply;
 
 /**
- * {@code UiidAndDateParameterBuilderPlugin} swagger plugin to convert default
+ * {@code UiidAndDateParameterBuilder} swagger plugin to convert default
  * value field to a dynamic field to display newly generated UUID and date in
  * ISO format.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/17/17

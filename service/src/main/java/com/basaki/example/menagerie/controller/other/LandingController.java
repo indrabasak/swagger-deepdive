@@ -8,10 +8,11 @@ import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * {@code LandingController} is the REST controller for redirecting the home
- * page to swagger UI. </p>
+ * page to swagger UI.
+ * <p>
  *
  * @author Indra Basak
- * @since 2/23/17
+ * @since 4/29/17
  */
 @RestController
 @ApiIgnore

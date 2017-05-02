@@ -4,7 +4,7 @@ import com.basaki.example.menagerie.model.MenagerieModel;
 
 /**
  * {@code Tiger} represents a Panthera tigris.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/29/17

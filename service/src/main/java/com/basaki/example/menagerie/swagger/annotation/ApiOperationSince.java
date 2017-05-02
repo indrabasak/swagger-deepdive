@@ -6,7 +6,12 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Created by indra.basak on 5/1/17.
+ * {@code ApiOperationSince} is a custom swagger annotation to publish the since
+ * object in swagger json.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/30/17
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)

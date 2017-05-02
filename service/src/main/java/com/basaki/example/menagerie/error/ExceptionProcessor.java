@@ -12,7 +12,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 /**
  * {@code ExceptionProcessor} processes exceptions at the application level and
  * it is not restricted to any specific controller.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 3/8/17

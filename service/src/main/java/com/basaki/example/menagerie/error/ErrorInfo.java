@@ -8,7 +8,7 @@ import lombok.Setter;
 /**
  * {@code ErrorInfo} represents an error response object which is exposed to
  * the external client in a human readbable form.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 3/18/17

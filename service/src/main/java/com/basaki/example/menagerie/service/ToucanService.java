@@ -7,7 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * Created by indra.basak on 4/30/17.
+ * {@codeToucanService} provides CRUD operations on a {@code Toucan}.
+ * <p>
+ *
+ * @author Indra Basak
+ * @since 4/30/17
  */
 @Service
 public class ToucanService extends AbstractMenagerieService<Toucan> {

@@ -34,7 +34,7 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 /**
  * {@code LionController} is the spring REST controller for Lion API.
  * Exposes all CRUD operations on lion.
- * <p/>
+ * <p>
  *
  * @author Indra Basak
  * @since 4/30/17
