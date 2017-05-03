@@ -42,9 +42,7 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 @SuppressWarnings("MVCPathVariableInspection")
 @RestController
 @Slf4j
-@Api(value = "Lion API",
-        description = "Lion API",
-        produces = "application/json", tags = {"A1"})
+@Api(description = "Lion API", produces = "application/json", tags = {"A1"})
 @Classification(kingdom = "Animalia", phylum = "Chordata", clazz = "Mammalia",
         order = "Carnivora", family = "Felidae", genus = "Panthera",
         species = "Panthera leo")

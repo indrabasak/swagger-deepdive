@@ -42,9 +42,7 @@ import static com.basaki.example.menagerie.swagger.plugin.UiidAndDateParameterBu
 @SuppressWarnings("MVCPathVariableInspection")
 @RestController
 @Slf4j
-@Api(value = "Elephant API",
-        description = "Elephant API",
-        produces = "application/json", tags = {"A3"})
+@Api(description = "Elephant API", produces = "application/json", tags = {"A3"})
 @Classification(kingdom = "Animalia", phylum = "Chordata", clazz = "Mammalia",
         order = "Proboscidea", family = "Elephantidae", genus = "Loxodonta",
         species = "Loxodonta africana")

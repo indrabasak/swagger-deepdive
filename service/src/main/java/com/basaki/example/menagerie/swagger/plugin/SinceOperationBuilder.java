@@ -29,15 +29,12 @@ public class SinceOperationBuilder implements OperationBuilderPlugin {
 
     @Override
     public void apply(OperationContext context) {
-        Optional<ApiOperation>
-                annotation = context.findAnnotation(ApiOperation.class);
-
-        Optional<ApiOperationSince> apiSinceOperation =
+        Optional<ApiOperationSince> annotation =
                 context.findAnnotation(ApiOperationSince.class);
-        if (apiSinceOperation.isPresent() && apiSinceOperation.get().value() != null) {
-            String value = apiSinceOperation.get().value();
-            String description = apiSinceOperation.get().description();
-            ObjectVendorExtension ext = new ObjectVendorExtension("x-since");
+        if (annotation.isPresent() && annotation.get().value() != null) {
+            String value = annotation.get().value();
+            String description = annotation.get().description();
+            ObjectVendorExtension ext = new ObjectVendorExtension("Since");
             if (description != null) {
                 ext.addProperty(
                         new StringVendorExtension("description", description));

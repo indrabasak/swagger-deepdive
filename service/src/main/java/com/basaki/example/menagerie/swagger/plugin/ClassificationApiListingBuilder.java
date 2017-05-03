@@ -130,5 +130,4 @@ public class ClassificationApiListingBuilder implements ApiListingBuilderPlugin 
         newTagNames.add(value);
         builder.tagNames(newTagNames);
     }
-
 }
