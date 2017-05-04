@@ -1,5 +1,6 @@
 theme: jekyll-theme-midnight
 
 baseurl: /swagger-deepdive
+permalink: /swagger-deepdive/
 title: Menagerie
 author: Indra Basak
