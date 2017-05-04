@@ -13,8 +13,8 @@ The menagerie project consists of multiple controllers exposing different REST e
 `LionController`, `ParrotController`, `TigerController`, and `ToucanController`. The backend services are supported by 
 HSQLDB, an in-memory database, and JPA.
 
-The menagerie application is based on Springfox 2.6.1 version. You can find more about the different Swagger 
-customizations of this project [here.](https://github.com/indrabasak/swagger-deepdive/wiki)
+The menagerie application is based on Springfox 2.6.1 version. You can find more about different Swagger/Springfox 
+customizations, please refer to the [Wiki page.](https://github.com/indrabasak/swagger-deepdive/wiki)
 
 ### Build
 Execute the following command from the parent directory to build the project:
