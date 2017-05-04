@@ -44,3 +44,12 @@ jpa:
     org:
       hibernate:
         flushMode: AUTO
+
+spring:
+  output:
+    ansi:
+      enabled: ALWAYS
+
+#banner:
+#  image:
+#    location: images/favicon-32x32.png
