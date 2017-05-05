@@ -32,6 +32,11 @@
             <artifactId>swagger-deepdive-model</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.basaki.example</groupId>
+            <artifactId>swagger-deepdive-swagger</artifactId>
+            <version>${project.version}</version>
+        </dependency>
 
         <!-- Spring Boot -->
         <dependency>

@@ -102,5 +102,6 @@
     <modules>
 		<module>model</module>
         <module>service</module>
+        <module>swagger</module>
 	</modules>
 </project>
