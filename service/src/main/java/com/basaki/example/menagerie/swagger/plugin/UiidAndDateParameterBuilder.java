@@ -1,7 +1,5 @@
 package com.basaki.example.menagerie.swagger.plugin;
 
-import com.fasterxml.classmate.ResolvedType;
-import com.google.common.base.Function;
 import com.google.common.base.Optional;
 import io.swagger.annotations.ApiParam;
 import java.time.ZonedDateTime;
@@ -9,17 +7,12 @@ import java.time.format.DateTimeFormatter;
 import java.util.UUID;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
-import springfox.documentation.schema.Collections;
-import springfox.documentation.schema.Enums;
-import springfox.documentation.service.AllowableValues;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spi.service.ParameterBuilderPlugin;
 import springfox.documentation.spi.service.contexts.ParameterContext;
 import springfox.documentation.swagger.common.SwaggerPluginSupport;
-import springfox.documentation.swagger.schema.ApiModelProperties;
 
 import static com.google.common.base.Strings.emptyToNull;
-import static com.google.common.base.Strings.isNullOrEmpty;
 import static springfox.documentation.swagger.common.SwaggerPluginSupport.pluginDoesApply;
 
 /**
@@ -48,10 +41,7 @@ public class UiidAndDateParameterBuilder implements ParameterBuilderPlugin {
         Optional<ApiParam> apiParam =
                 context.resolvedMethodParameter().findAnnotation(
                         ApiParam.class);
-        context.parameterBuilder()
-                .allowableValues(allowableValues(
-                        context.resolvedMethodParameter().getParameterType(),
-                        apiParam.transform(toAllowableValue()).or("")));
+
         if (apiParam.isPresent() && apiParam.get().defaultValue() != null &&
                 (apiParam.get().defaultValue().equals(TYPE_ISO_DATE_TIME) ||
                         apiParam.get().defaultValue().equals(TYPE_UUID))) {
@@ -74,34 +64,5 @@ public class UiidAndDateParameterBuilder implements ParameterBuilderPlugin {
                     apiParam.get().allowMultiple());
             context.parameterBuilder().required(apiParam.get().required());
         }
-    }
-
-    private Function<ApiParam, String> toAllowableValue() {
-        return new Function<ApiParam, String>() {
-            @Override
-            public String apply(ApiParam input) {
-                return input.allowableValues();
-            }
-        };
-    }
-
-    private AllowableValues allowableValues(ResolvedType parameterType,
-            String allowableValueString) {
-        AllowableValues allowableValues = null;
-        if (!isNullOrEmpty(allowableValueString)) {
-            allowableValues = ApiModelProperties.allowableValueFromString(
-                    allowableValueString);
-        } else {
-            if (parameterType.getErasedType().isEnum()) {
-                allowableValues =
-                        Enums.allowableValues(parameterType.getErasedType());
-            }
-            if (Collections.isContainerType(parameterType)) {
-                allowableValues = Enums.allowableValues(
-                        Collections.collectionElementType(
-                                parameterType).getErasedType());
-            }
-        }
-        return allowableValues;
     }
 }
