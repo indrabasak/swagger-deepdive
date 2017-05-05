@@ -1,0 +1,21 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>com.basaki.example</groupId>
+        <artifactId>swagger-deepdive</artifactId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>swagger-deepdive-swagger</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0</version>
+    <name>Swagger Deepdive Custom Swagger Plugins</name>
+
+    <dependencies>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-web</artifactId>
+        <version>4.3.8.RELEASE</version>
+    </dependency>
+    </dependencies>
+</project>
