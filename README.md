@@ -9,9 +9,13 @@ The project consist of multiple endpoints of different animals and birds which a
 "A menagerie is a collection of captive animals, frequently exotic, kept for display; or the place where such a 
 collection is kept, a precursor to the modern zoological garden."
 
-The menagerie project consists of multiple controllers exposing different REST endpoints: `ElephantController`, 
-`LionController`, `ParrotController`, `TigerController`, and `ToucanController`. The backend services are supported by 
-HSQLDB, an in-memory database, and JPA.
+The menagerie project consist of three modules:
+
+1. **swagger**: The custom Springfox/Swagger classes and plugins reside here.
+1. **model:** Menagerie model classes.
+1. **service:** Menagerie service related classes. It consists of multiple controller classes exposing different REST 
+endpoints: `ElephantController`, `LionController`, `ParrotController`, `TigerController`, and `ToucanController`. 
+The backend services are supported by HSQLDB, an in-memory database, and JPA.
 
 The menagerie application is based on Springfox 2.6.1 version. You can find more about different Swagger/Springfox 
 customizations, please refer to the [Wiki page.](https://github.com/indrabasak/swagger-deepdive/wiki)
