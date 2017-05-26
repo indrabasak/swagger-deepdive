@@ -2,7 +2,7 @@ theme: jekyll-theme-midnight
 
 baseurl: /swagger-deepdive
 title: Menagerie
-description: Explores different features of Swagger and Springfox in-depth.
+description: Explores different features of Swagger and Springfox in-depth
 
 author: Indra Basak
 
